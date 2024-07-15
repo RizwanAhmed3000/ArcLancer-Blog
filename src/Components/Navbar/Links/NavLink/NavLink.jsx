@@ -4,9 +4,8 @@ import { usePathname } from "next/navigation"
 
 const NavLink = ({ item }) => {
     const path = usePathname();
-    // console.log(path)
     return (
-        <Link href={item.path} className={`text-theme-gray font-semibold hover:text-theme-black transition duration-150 ${path === item.path && "text-black"}`}>
+        <Link href={item.path} className={`font-semibold hover:text-theme-black transition duration-150 ${path === item.path ? "text-black" : "text-theme-gray"}`}>
             {item.title}
         </Link>
     )

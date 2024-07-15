@@ -18,8 +18,8 @@ const Navbar = () => {
                 {/* <Link href={"/"} className="text-theme-gray font-semibold hover:text-theme-black transition duration-150">Home</Link>
                 <Link href={"/"} className="text-theme-gray font-semibold hover:text-theme-black transition duration-150">Contact</Link>
                 <Link href={"/"} className="text-theme-gray font-semibold hover:text-theme-black transition duration-150">About</Link> */}
-                <Links />
                 {/* <Link href={"/"}>Blog</Link> */}
+                <Links />
                 <AuthLink />
             </div>
         </div>
