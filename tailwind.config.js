@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,6 +19,7 @@ module.exports = {
         "theme-gray": "#9FA2A6",
         "theme-orange": "#F26938",
         "theme-orange-soft": "#F28B66",
+        "dark-orange-soft": "#F28B66",
       },
       screens: {
         mobileSm: "320px",
