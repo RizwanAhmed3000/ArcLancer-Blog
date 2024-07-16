@@ -5,7 +5,7 @@ import React, { useContext } from 'react'
 const ToggleTheme = () => {
     
     const { theme } = useContext(ThemeContext);
-    console.log(theme)
+    // console.log(theme)
 
     return (
         <label className="inline-flex items-center relative">

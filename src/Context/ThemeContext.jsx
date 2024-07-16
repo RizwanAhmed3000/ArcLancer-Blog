@@ -5,7 +5,7 @@ export const ThemeContext = createContext()
 const getfromLocalStorage = () => {
     if (typeof window !== undefined) {
         const value = localStorage.getItem("theme");
-        return value || "light"
+        return value || "dark"
     }
 }
 

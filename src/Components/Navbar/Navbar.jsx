@@ -11,7 +11,7 @@ const Navbar = () => {
                 <Social />
             </div>
             <div className="logo flex flex-1 justify-center">
-                <h1 className="text-[32px] font-extrabold tracking-widest">Arclancer</h1>
+                <h1 className="text-[32px] font-extrabold tracking-widest text-theme-black">Arclancer</h1>
             </div>
             <div className="links flex gap-[20px] flex-1 justify-end items-center">
                 <ToggleTheme />
