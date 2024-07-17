@@ -11,9 +11,9 @@ const Navbar = () => {
                 <Social />
             </div>
             <div className="logo flex flex-1 justify-center">
-                <h1 className="text-[28px] font-extrabold tracking-widest text-theme-black dark:text-theme-white desktopSm:text-[32px]">Arclancer</h1>
+                <h1 className="text-[32px] font-extrabold tracking-widest text-theme-black dark:text-theme-white desktopSm:text-[28px]">Arclancer</h1>
             </div>
-            <div className="links flex gap-[10px] desktopSm:gap-[20px] flex-1 justify-end items-center">
+            <div className="links flex gap-[20px] desktopSm:gap-[10px] flex-1 justify-end items-center">
                 <ToggleTheme />
                 {/* <Link href={"/"} className="text-theme-gray font-semibold hover:text-theme-black transition duration-150">Home</Link>
                 <Link href={"/"} className="text-theme-gray font-semibold hover:text-theme-black transition duration-150">Contact</Link>
