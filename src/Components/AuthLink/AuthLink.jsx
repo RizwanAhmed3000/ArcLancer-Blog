@@ -7,7 +7,7 @@ const AuthLink = () => {
         <>
             {
                 !isLogin ? (
-                    <Link href={"/login"} className='text-theme-gray font-semibold hover:text-theme-black transition duration-150'>
+                    <Link href={"/login"} className='text-theme-gray font-semibold hover:text-theme-black dark:hover:text-theme-white transition duration-150'>
                         Login
                     </Link>
                 ) : (

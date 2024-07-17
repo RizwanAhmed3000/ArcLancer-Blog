@@ -9,7 +9,7 @@ const NavLink = ({ item }) => {
     const { theme } = useContext(ThemeContext);
     console.log(theme)
     return (
-        <Link href={item.path} className={`font-semibold ${theme === 'dark' && "dark:bg-dark-orange-soft"} hover:text-theme-black transition duration-150 ${path === item.path ? "text-black" : "text-theme-gray"}`}>
+        <Link href={item.path} className={`font-semibold hover:text-theme-black dark:hover:text-theme-white transition duration-150 ${path === item.path ? "text-theme-black dark:text-theme-white" : "text-theme-gray"}`}>
             {item.title}
         </Link>
     )
