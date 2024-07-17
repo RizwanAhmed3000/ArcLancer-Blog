@@ -19,7 +19,6 @@ module.exports = {
         "theme-gray": "#9FA2A6",
         "theme-orange": "#F26938",
         "theme-orange-soft": "#F28B66",
-        "dark-orange-soft": "#F28B66",
       },
       screens: {
         mobileSm: "320px",

@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply dark:bg-dark-orange-soft
-}
+/* body{
+    @apply bg-theme-white dark:bg-dark-orange-soft
+} */
