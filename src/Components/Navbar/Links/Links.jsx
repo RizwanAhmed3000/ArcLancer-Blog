@@ -18,7 +18,7 @@ const Links = () => {
     ]
 
     return (
-        <div className='flex gap-[20px] desktopSm:gap-[10px]'>
+        <div className='flex gap-[20px] desktopSm:gap-[10px] tabletRg:hidden'>
             {
                 links.map((link) => (
                     <NavLink item={link} key={link.title} />
