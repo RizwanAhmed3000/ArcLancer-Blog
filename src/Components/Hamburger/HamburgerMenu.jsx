@@ -7,6 +7,7 @@ import ToggleTheme from "../ToggleTheme/ToggleTheme"
 const HamburgerMenu = () => {
 
     const [open, setOpen] = useState(false)
+    console.log(open)
 
     return (
         <>
