@@ -5,7 +5,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="w-[100%]">
-      <FeaturedBlog />
+      <div className="my-[20px]">
+        <FeaturedBlog />
+      </div>
       <CategoryList />
     </main>
   );
