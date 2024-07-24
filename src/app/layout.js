@@ -1,11 +1,11 @@
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar/Navbar";
 import Footer from "@/Components/Footer/Footer";
 import { ThemeContextProvider } from "@/Context/ThemeContext";
 import ThemeProvider from "@/Providers/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito_init = Nunito({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "ArcLancer Blog",
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={[inter.className, "overflow-x-hidden"]}>
+      <body className={[nunito_init.className, "overflow-x-hidden"]}>
         <ThemeContextProvider>
           <ThemeProvider>
             <div className="container dark:bg-theme-black max-w-[100vw] min-h-[100vh] bg-theme-white text-theme-black dark:text-theme-white">

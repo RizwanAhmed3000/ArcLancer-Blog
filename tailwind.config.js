@@ -32,6 +32,9 @@ module.exports = {
         desktopRg: { 'max': "1350px"},
         desktopLg: { 'max': "1536px"},
       },
+      fontFamily:{
+        nunito: ['var(--font-nunito)']
+      }
     },
   },
   plugins: [],
