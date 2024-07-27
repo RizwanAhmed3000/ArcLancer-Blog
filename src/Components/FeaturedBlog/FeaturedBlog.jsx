@@ -16,8 +16,8 @@ const FeaturedBlog = () => {
             <button className="bg-theme-orange rounded py-3 px-6 hover:bg-theme-orange-soft transition duration-150">
                 Read More
             </button>
-            <div className="absolute right-[20%] top-0 h-[100%] w-[40%] rounded-tl-[10.5rem]">
-                <div className="imgContainer w-[100%] h-[100%] relative rounded-tl-[10.5rem]">
+            <div className="absolute right-[20%] top-0 h-[100%] w-[35%] rounded-tl-[10.5rem]">
+                <div className="imgContainer w-[100%] h-[calc(100vh-100px)] relative rounded-tl-[10.5rem]">
                     <Image src='/img1.jpg' className="object-cover rounded-tl-[10.5rem]" fill />
                 </div>
             </div>
