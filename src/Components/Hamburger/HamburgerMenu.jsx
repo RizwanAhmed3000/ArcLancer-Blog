@@ -19,7 +19,7 @@ const HamburgerMenu = () => {
                 open && (
                     <>
                         {/* <div className="overlay w-[100%] h-[100vh] top-0 left-0 right-0 bottom-0 bg-slate-300 absolute"></div> */}
-                        <div className="responsiveMenu absolute top-[100px] right-[0px] bg-theme-white dark:bg-theme-black drop-shadow-xl h-[calc(100vh-100px)] w-[50%] z-10 flex flex-col items-center justify-center gap-8">
+                        <div className="responsiveMenu absolute top-[50px] right-[0px] bg-theme-white dark:bg-theme-black drop-shadow-xl h-[calc(100%)] w-[100%] z-10 flex flex-col items-center justify-center gap-8">
                             <Link href={"/"} className="text-[28px] font-semibold">Home</Link>
                             <Link href={"/about"} className="text-[28px] font-semibold">About</Link>
                             <Link href={"/contact"} className="text-[28px] font-semibold">Contact</Link>
