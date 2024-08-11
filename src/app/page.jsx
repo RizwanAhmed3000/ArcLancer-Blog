@@ -8,7 +8,9 @@ export default function Home() {
       <div className="my-[20px]">
         <FeaturedBlog />
       </div>
-      <CategoryList />
+      <div className="categoryContainer my-[20px]">
+        <CategoryList />
+      </div>
     </main>
   );
 }
