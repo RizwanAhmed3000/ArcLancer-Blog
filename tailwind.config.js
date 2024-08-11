@@ -17,8 +17,10 @@ module.exports = {
         "theme-white": "#F2F2F2",
         "theme-black": "#0D0D0D",
         "theme-gray": "#9FA2A6",
+        "theme-gray-light": "#cbcfd4",
         "theme-orange": "#F26938",
         "theme-orange-soft": "#F28B66",
+        "theme-orange-dark": "#e14b15",
       },
       screens: {
         mobileSm: {'max': "320px"},
