@@ -1,5 +1,4 @@
 import CategoryBox from "./CategoryBox/CategoryBox"
-import business from "../../../public/business.jpg"
 import Link from "next/link"
 
 const CategoryList = () => {
