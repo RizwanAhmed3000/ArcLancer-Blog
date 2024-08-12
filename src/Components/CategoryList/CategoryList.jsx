@@ -1,26 +1,32 @@
 import CategoryBox from "./CategoryBox/CategoryBox"
+import business from "../../../public/business.jpg"
+import Link from "next/link"
 
 const CategoryList = () => {
     const category = [
         {
-            categoryName: "Sports",
-            icon: "⚽",
+            categoryName: "Business",
+            icon: 'business.jpg',
         },
         {
-            categoryName: "Tech",
-            icon: "💻",
+            categoryName: "Travel",
+            icon: "Travel.jpg",
         },
         {
             categoryName: "Politics",
-            icon: "😎",
+            icon: "politics.jpg",
         },
         {
-            categoryName: "World",
-            icon: "🌏",
+            categoryName: "Culture",
+            icon: "culture.png",
         },
         {
             categoryName: "Fashion",
-            icon: "💄",
+            icon: "fashion.jpg",
+        },
+        {
+            categoryName: "Food",
+            icon: "food.jpg",
         },
     ]
     return (
@@ -30,8 +36,10 @@ const CategoryList = () => {
             </h1>
             <div className="w-[100%] flex items-center justify-evenly gap-[50px] flex-wrap py-[10px]">
                 {
-                    category.map((item, index)=>(
-                        <CategoryBox icon={item.icon} categoryName={item.categoryName} key={index}/>
+                    category.map((item, index) => (
+                        <Link href={"/"}>
+                            <CategoryBox data={item} key={index} />
+                        </Link>
                     ))
                 }
             </div>
