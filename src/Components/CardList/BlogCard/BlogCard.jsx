@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const BlogCard = () => {
+const BlogCard = ({data}) => {
     return (
         <div className="cardConatiner flex items-center gap-[25px] mb-[50px]">
             <div className="img relative h-[200px] object-cover flex-1">
