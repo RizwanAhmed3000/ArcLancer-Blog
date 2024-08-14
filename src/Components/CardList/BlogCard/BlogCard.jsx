@@ -15,7 +15,7 @@ const BlogCard = ({data}) => {
                 <Link href={"/"}>
                     <h1 className="text-[22px] font-semibold">This is the blog main title</h1>
                 </Link>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod enim hic ex libero amet quis, temporibus omnis quisquam tenetur dignissimos laborum earum excepturi itaque exercitationem eligendi. Impedit doloribus facere.</p>
+                <p className="text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod enim hic ex libero amet quis, temporibus omnis quisquam tenetur dignissimos laborum earum excepturi itaque exercitationem eligendi. Impedit doloribus facere.</p>
                 <Link href={"/"} className="font-semibold underline-offset-4 underline hover:text-theme-orange transition duration-150  w-fit">
                     Read More
                 </Link>
