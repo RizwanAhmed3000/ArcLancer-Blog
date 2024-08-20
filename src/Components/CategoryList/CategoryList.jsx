@@ -28,6 +28,7 @@ const CategoryList = () => {
             icon: "food.jpg",
         },
     ]
+    console.log(category)
     return (
         <>
             <h1 className="text-[32px] font-semibold mb-[20px]">
