@@ -1,3 +1,4 @@
+import CategoryName from "@/Components/CategoryName/CategoryName"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -10,7 +11,7 @@ const BlogCard = ({data}) => {
             <div className="text flex-[2] flex flex-col gap-[5px]">
                 <div className="details flex gap-[20px] items-center">
                     <span className="postedAt text-theme-orange">8/13/2024</span>
-                    <span className="categoryName bg-theme-gray-light py-[5px] px-[10px] rounded">Travel</span>
+                    <CategoryName category={"Travel"} />
                 </div>
                 <Link href={"/"}>
                     <h1 className="text-[22px] font-semibold">This is the blog main title</h1>
