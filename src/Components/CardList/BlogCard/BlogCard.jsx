@@ -4,8 +4,8 @@ import Link from "next/link"
 
 const BlogCard = ({data}) => {
     return (
-        <div className="cardConatiner flex items-center gap-[25px] mb-[50px]">
-            <div className="img relative h-[200px] object-cover flex-1">
+        <div className="cardConatiner flex items-center gap-[25px] mb-[50px] tabletSm:flex-col">
+            <div className="img relative h-[200px] object-cover flex-1 tabletSm:w-[100%] tabletSm:h-[80px]">
                 <Image src={"/Travel.jpg"} fill className="rounded" />
             </div>
             <div className="text flex-[2] flex flex-col gap-[5px]">

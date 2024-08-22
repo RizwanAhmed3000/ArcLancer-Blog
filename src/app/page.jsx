@@ -13,9 +13,13 @@ export default function Home() {
       <div className="categoryContainer my-[20px]">
         <CategoryList />
       </div>
-      <div className="flex gap-[50px] my-[20px]">
-        <CardList />
-        <SideMenu />
+      <div className="flex gap-[50px] my-[20px] tabletRg:flex-col">
+        <div>
+          <CardList />
+        </div>
+        <div> 
+          <SideMenu />
+        </div>
       </div>
     </main>
   );
