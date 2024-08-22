@@ -1,6 +1,7 @@
 import React from 'react'
 import SideCard from './SideCard/SideCard'
 import CategoryBox from '../CategoryList/CategoryBox/CategoryBox'
+import Link from 'next/link'
 
 const SideMenu = () => {
     const category = [
@@ -45,11 +46,11 @@ const SideMenu = () => {
             <div className="category mt-[25px] flex flex-wrap items-center gap-[20px]">
                 {
                     category.map((item, index) => (
-                        <span className='bg-theme-gray-light shadow-md w-[100px] h-[40px] flex items-center justify-center rounded cursor-pointer dark:bg-theme-black dark:border-theme-white dark:border-[2px] dark:hover:bg-theme-white dark:hover:text-theme-black transition duration-150' key={item.categoryName}>
+                        <Link href={`/`} className='bg-theme-gray-light shadow-md w-[100px] h-[40px] flex items-center justify-center rounded cursor-pointer dark:bg-theme-black dark:border-theme-white dark:border-[2px] dark:hover:bg-theme-white dark:hover:text-theme-black transition duration-150' key={item.categoryName}>
                             {
                                 item.categoryName
                             }
-                        </span>
+                        </Link>
                     ))
                 }
             </div>
