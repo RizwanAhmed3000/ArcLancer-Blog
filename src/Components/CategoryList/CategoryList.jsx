@@ -1,5 +1,4 @@
 import CategoryBox from "./CategoryBox/CategoryBox"
-import Link from "next/link"
 
 const CategoryList = () => {
     const category = [
@@ -37,9 +36,7 @@ const CategoryList = () => {
             <div className="w-[100%] flex items-center justify-evenly gap-[50px] flex-wrap py-[10px]">
                 {
                     category.map((item, index) => (
-                        <Link href={"/"}>
-                            <CategoryBox data={item} key={index} />
-                        </Link>
+                        <CategoryBox data={item} key={index} />
                     ))
                 }
             </div>
