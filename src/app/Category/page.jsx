@@ -7,10 +7,10 @@ const CategoryBlog = () => {
         <div>
             <h1 className='bg-theme-orange text-theme-white text-[32px] font-bold text-center rounded py-[15px] my-[25px]'>{`Business Blogs`}</h1>
             <div className="flex gap-[50px] my-[20px] tabletRg:flex-col">
-                <div>
+                <div className='flex-[5]'>
                     <CardList />
                 </div>
-                <div>
+                <div className='flex-[2]'>
                     <SideMenu />
                 </div>
             </div>

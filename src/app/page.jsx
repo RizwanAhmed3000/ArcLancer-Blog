@@ -14,10 +14,10 @@ export default function Home() {
         <CategoryList />
       </div>
       <div className="flex gap-[50px] my-[20px] tabletRg:flex-col">
-        <div>
+        <div className="flex-[5]">
           <CardList />
         </div>
-        <div> 
+        <div className="flex-[2]"> 
           <SideMenu />
         </div>
       </div>
