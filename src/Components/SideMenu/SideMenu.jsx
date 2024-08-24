@@ -32,7 +32,7 @@ const SideMenu = () => {
     ]
 
     return (
-        <div className='sideMenuContainer flex-[2]'>
+        <div className='sideMenuContainer '>
             <h2 className='smallTitle text-theme-gray'>{`What's hot`}</h2>
             <h1 className='mainTitle text-[32px] font-semibold'>Most Popular</h1>
             <div className="first">

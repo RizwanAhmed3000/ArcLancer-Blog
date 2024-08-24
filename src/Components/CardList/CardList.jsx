@@ -5,7 +5,7 @@ import Pagination from '../Pagination/Pagination'
 const CardList = () => {
     const array = [1, 2, 3, 4, 5, 6]
     return (
-        <div className='cardListContainer flex-[5]'>
+        <div className='cardListContainer'>
             <h1 className='text-[32px] font-semibold mb-[20px]'>Recent Blogs</h1>
             <div className="postListContainer">
                 {
