@@ -1,4 +1,4 @@
-import CardList from '@/Components/CardList/CardList'
+import Comments from '@/Components/Comments/Comments'
 import SideMenu from '@/Components/SideMenu/SideMenu'
 import Image from 'next/image'
 import React from 'react'
@@ -23,7 +23,14 @@ const SingleBlogPage = () => {
             </div>
             <div className="flex gap-[50px] my-[20px] tabletRg:flex-col">
                 <div className='flex-[5]'>
-                    <p className='blogText '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus unde impedit numquam explicabo veniam obcaecati et porro itaque praesentium dicta. Expedita neque suscipit voluptates dolorem doloremque quos architecto, illum eaque sequi magnam iusto at reiciendis dicta excepturi, fugiat itaque nisi eveniet laudantium? Reprehenderit harum provident sapiente dicta eveniet blanditiis obcaecati nam dolores amet iste quam distinctio rerum eligendi laboriosam sint aspernatur excepturi consequatur temporibus a, dolorum tempora minima veniam aliquid accusantium? Esse vitae a id distinctio. Aspernatur, rerum! Praesentium ullam similique modi quis nobis architecto, voluptatibus vero unde quam neque repellat magni porro, aliquid, assumenda esse? Voluptatum, consectetur repellat cupiditate illum necessitatibus, placeat laborum cupiditate sint ratione dolorum aliquam dolorem quisquam! Nobis repellat repellendus laborum perferendis a quam neque, in iure?</p>
+                    <div className="postTextContainer">
+                        <p className='blogText mb-[15px]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus unde impedit numquam explicabo veniam obcaecati et porro itaque praesentium dicta. Expedita neque suscipit voluptates dolorem doloremque quos architecto, illum eaque sequi magnam iusto at reiciendis dicta excepturi, fugiat itaque nisi eveniet laudantium? Reprehenderit harum provident sapiente dicta eveniet blanditiis obcaecati nam dolores amet iste quam distinctio rerum eligendi laboriosam sint aspernatur excepturi consequatur temporibus a, dolorum tempora minima veniam aliquid accusantium? Esse vitae a id distinctio. Aspernatur, rerum! Praesentium ullam similique modi quis nobis architecto, voluptatibus vero unde quam neque repellat magni porro, aliquid, assumenda esse? Voluptatum, consectetur repellat cupiditate illum necessitatibus, placeat laborum cupiditate sint ratione dolorum aliquam dolorem quisquam! Nobis repellat repellendus laborum perferendis a quam neque, in iure?</p>
+                        <p className='blogText mb-[15px]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus unde impedit numquam explicabo veniam obcaecati et porro itaque praesentium dicta. Expedita neque suscipit voluptates dolorem doloremque quos architecto, illum eaque sequi magnam iusto at reiciendis dicta excepturi, fugiat itaque nisi eveniet laudantium? Reprehenderit harum provident sapiente dicta eveniet blanditiis obcaecati nam dolores amet iste quam distinctio rerum eligendi laboriosam sint aspernatur excepturi consequatur temporibus a</p>
+                        <p className='blogText mb-[15px]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus unde impedit numquam explicabo veniam obcaecati et porro itaque praesentium dicta. Expedita neque suscipit voluptates dolorem doloremque quos architecto, illum eaque sequi magnam iusto at reiciendis dicta</p>
+                    </div>
+                    <div className="commentsContainer">
+                        <Comments />
+                    </div>
                 </div>
                 <div className='flex-[2]'>
                     <SideMenu />
