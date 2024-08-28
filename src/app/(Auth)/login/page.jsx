@@ -5,7 +5,7 @@ const LoginPage = () => {
     return (
         <div className='container h-[90vh] flex items-center justify-center'>
             <div className="wrapper w-[100%] h-[90%] flex">
-                <div className="left flex-1 flex flex-col items-center justify-center gap-[35px]">
+                <div className="left flex-1 flex flex-col items-center justify-center gap-[35px] ">
                     <div className="text">
                         <h1 className='text-center text-[32px] font-semibold'>Welcome Back!</h1>
                         <p className='text-center text-[14px]'>Enter Your Account Details</p>
@@ -42,6 +42,7 @@ const LoginPage = () => {
                     </div>
                     <Button text={'Sign In'} />
                 </div>
+
                 <div className="right flex-1 bg-theme-black flex flex-col items-center justify-center gap-[35px]">
                     <div className="text">
                         <h1 className='text-center text-[32px] font-semibold text-white'>Join Us!</h1>
@@ -74,7 +75,7 @@ const LoginPage = () => {
                     </div>
                     <div className="inputs flex flex-col gap-[15px]">
                         <input type="text" placeholder='Username' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
-                        <input type="text" placeholder='Email or Username' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
+                        <input type="text" placeholder='Email' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
                         <input type="password" placeholder='Password' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
                         <p className='text-end text-theme-orange cursor-pointer mr-1'>Forgot Password</p>
                     </div>
