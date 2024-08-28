@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Button from '../OrangeButton/Button'
 
 const AuthLink = () => {
     const isLogin = false
@@ -7,8 +8,8 @@ const AuthLink = () => {
         <>
             {
                 !isLogin ? (
-                    <Link href={"/login"} className='text-theme-gray font-semibold hover:text-theme-black dark:hover:text-theme-white transition duration-150'>
-                        Login
+                    <Link href={"/login"} className=''>
+                        <Button text={`login`}/>
                     </Link>
                 ) : (
                     <>
