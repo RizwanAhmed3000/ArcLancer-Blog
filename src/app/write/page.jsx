@@ -12,28 +12,30 @@ const WriteBlog = () => {
     const [value, setValue] = useState("")
 
     return (
-        <div className="container">
+        <div className="container flex flex-col gap-[30px]">
             <input type="text" placeholder="Title" className="w-[100%] bg-transparent text-[58px] outline-none my-[25px] placeholder:text-theme-gray" />
             <div className="editor flex items-center gap-[20px]">
-                <button className="hover:text-theme-orange transition duration-150" onClick={()=> setOpen(!open)}>
+                <button className="hover:text-theme-orange transition duration-150" onClick={() => setOpen(!open)}>
                     <CiCirclePlus size={40} />
                 </button>
                 {
                     open && (
                         <div className="add flex items-center gap-[18px]">
                             <button className="hover:text-theme-orange transition duration-150">
-                                <CiImageOn size={28}/>
+                                <CiImageOn size={28} />
                             </button>
                             <button className="hover:text-theme-orange transition duration-150">
-                                <GoUpload size={28}/>
+                                <GoUpload size={28} />
                             </button>
                             <button className="hover:text-theme-orange transition duration-150">
-                                <CiVideoOn size={28}/>
+                                <CiVideoOn size={28} />
                             </button>
                         </div>
                     )
                 }
-                <ReactQuill theme="bubble" value={value} onChange={setValue} placeholder="Tell Your Story..."/>
+            </div>
+            <div>
+                <ReactQuill theme="bubble" value={value} onChange={setValue} placeholder="Tell Your Story..." />
             </div>
         </div>
     )

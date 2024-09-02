@@ -5,3 +5,16 @@
 /* body{
     @apply bg-theme-white dark:bg-dark-orange-soft
 } */
+
+.quill{
+    width: 100%;
+}
+
+.ql-container{
+    font-size: 20px !important;
+    width: 100%;
+}
+
+/* .quil > .ql-container > .ql-editor.ql-blank::before{
+
+} */
