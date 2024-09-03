@@ -4,6 +4,7 @@ import Navbar from "@/Components/Navbar/Navbar";
 import Footer from "@/Components/Footer/Footer";
 import { ThemeContextProvider } from "@/Context/ThemeContext";
 import ThemeProvider from "@/Providers/ThemeProvider";
+import AuthProvider from "@/Providers/AuthProvider";
 
 const nunito_init = Nunito({ subsets: ["latin"], weight: "400" });
 
@@ -16,17 +17,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={[nunito_init.className, "overflow-x-hidden"]}>
-        <ThemeContextProvider>
-          <ThemeProvider>
-            <div className="container dark:bg-theme-black max-w-[100vw] min-h-[100vh] bg-theme-white text-theme-black dark:text-theme-white">
-              <div className="wrapper max-w-[1536px] mx-auto px-[80px] desktopLg:max-w-[1366px] desktopSm:max-w-[1024px] laptopRg:max-w-[768px] laptopRg:px-[40px] tabletLg:max-w-[640px] tabletRg:max-w-[475px] ">
-                <Navbar />
-                {children}
-                <Footer />
+        <AuthProvider>
+          <ThemeContextProvider>
+            <ThemeProvider>
+              <div className="container dark:bg-theme-black max-w-[100vw] min-h-[100vh] bg-theme-white text-theme-black dark:text-theme-white">
+                <div className="wrapper max-w-[1536px] mx-auto px-[80px] desktopLg:max-w-[1366px] desktopSm:max-w-[1024px] laptopRg:max-w-[768px] laptopRg:px-[40px] tabletLg:max-w-[640px] tabletRg:max-w-[475px] ">
+                  <Navbar />
+                  {children}
+                  <Footer />
+                </div>
               </div>
-            </div>
-          </ThemeProvider>
-        </ThemeContextProvider>
+            </ThemeProvider>
+          </ThemeContextProvider>
+        </AuthProvider>
       </body>
     </html>
   );
