@@ -1,7 +1,14 @@
+"use client"
 import Button from '@/Components/OrangeButton/Button'
+import { signIn, useSession } from 'next-auth/react'
 import React from 'react'
 
 const LoginPage = () => {
+
+    const { data, status } = useSession()
+    console.log(data, "===>>> data")
+    console.log(status, "===>>> status")
+
     return (
         <div className='container h-[90vh] flex items-center justify-center'>
             <div className="wrapper w-[100%] h-[90%] flex">
@@ -11,7 +18,7 @@ const LoginPage = () => {
                         <p className='text-center text-[14px]'>Enter Your Account Details</p>
                     </div>
                     <div className="sso flex flex-col gap-[10px]">
-                        <button className='flex items-center justify-center gap-3 w-[300px] py-[5px] px-[10px] rounded bg-white text-theme-black'>
+                        <button className='flex items-center justify-center gap-3 w-[300px] py-[5px] px-[10px] rounded bg-white text-theme-black' onClick={() => signIn("google")}>
                             <span >
                                 <svg class="icon" viewBox="0 0 24 24" className='w-[20px] h-[20px]'>
                                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
