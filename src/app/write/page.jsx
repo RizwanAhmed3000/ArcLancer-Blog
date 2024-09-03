@@ -12,7 +12,7 @@ const WriteBlog = () => {
     const [value, setValue] = useState("")
 
     return (
-        <div className="container flex flex-col gap-[30px]">
+        <div className="container flex flex-col gap-[30px] h-[100vh]">
             <input type="text" placeholder="Title" className="w-[100%] bg-transparent text-[58px] outline-none my-[25px] placeholder:text-theme-gray" />
             <div className="editor flex items-center gap-[20px]">
                 <button className="hover:text-theme-orange transition duration-150" onClick={() => setOpen(!open)}>

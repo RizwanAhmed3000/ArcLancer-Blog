@@ -5,7 +5,7 @@ import Button from '../OrangeButton/Button'
 import { usePathname } from "next/navigation"
 
 const AuthLink = () => {
-    const isLogin = true
+    const isLogin = false
     const path = usePathname();
     // console.log(path)
     return (
