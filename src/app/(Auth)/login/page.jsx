@@ -1,13 +1,23 @@
 "use client"
 import Button from '@/Components/OrangeButton/Button'
 import { signIn, useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const LoginPage = () => {
 
     const { data, status } = useSession()
-    console.log(data, "===>>> data")
-    console.log(status, "===>>> status")
+    // console.log(data, "===>>> data")
+    // console.log(status, "===>>> status")
+    const router = useRouter()
+
+    if (status === "loading") {
+        return <div className='loading'>Loading...</div>
+    }
+
+    if (status === 'authenticated') {
+        router.push("/")
+    }
 
     return (
         <div className='container h-[90vh] flex items-center justify-center'>
