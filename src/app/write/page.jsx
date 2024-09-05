@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CiCirclePlus, CiImageOn, CiVideoOn } from "react-icons/ci";
 import { FiUpload } from "react-icons/fi";
@@ -10,6 +11,16 @@ const WriteBlog = () => {
 
     const [open, setOpen] = useState(false)
     const [value, setValue] = useState("")
+    const { status } = useSession()
+    const router = useRouter()
+
+    if (status === "loading") {
+        return <div className='loading'>Loading...</div>
+    }
+
+    if (status === 'authenticated') {
+        router.push("/")
+    }
 
     return (
         <div className="container flex flex-col gap-[30px] h-[100vh]">
