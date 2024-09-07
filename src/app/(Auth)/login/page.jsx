@@ -53,6 +53,7 @@ const LoginPage = () => {
                         <div className='bg-theme-orange h-[3px] w-[33%]'></div>
                     </div>
                     <div className="inputs flex flex-col gap-[15px]">
+                        <input type="text" placeholder='Username' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
                         <input type="text" placeholder='Email or Username' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
                         <input type="password" placeholder='Password' className='w-[300px] py-[5px] px-[10px] rounded bg-white outline-theme-orange placeholder:text-theme-black' />
                         <p className='text-end text-theme-orange cursor-pointer mr-1'>Forgot Password</p>
@@ -60,7 +61,7 @@ const LoginPage = () => {
                     <Button text={'Sign In'} />
                 </div>
 
-                <div className="right flex-1 bg-theme-black flex flex-col items-center justify-center gap-[35px]">
+                {/* <div className="right flex-1 bg-theme-black flex flex-col items-center justify-center gap-[35px]">
                     <div className="text">
                         <h1 className='text-center text-[32px] font-semibold text-white'>Join Us!</h1>
                         <p className='text-center text-[14px] text-white'>Create Your Account</p>
@@ -97,7 +98,7 @@ const LoginPage = () => {
                         <p className='text-end text-theme-orange cursor-pointer mr-1'>Forgot Password</p>
                     </div>
                     <Button text={'Join Us'} />
-                </div>
+                </div> */}
             </div>
         </div>
     )
