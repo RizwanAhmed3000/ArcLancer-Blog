@@ -1,33 +1,18 @@
 import CategoryBox from "./CategoryBox/CategoryBox"
 
-const CategoryList = () => {
-    const category = [
-        {
-            categoryName: "Business",
-            icon: 'business.jpg',
-        },
-        {
-            categoryName: "Travel",
-            icon: "Travel.jpg",
-        },
-        {
-            categoryName: "Politics",
-            icon: "politics.jpg",
-        },
-        {
-            categoryName: "Culture",
-            icon: "culture.png",
-        },
-        {
-            categoryName: "Fashion",
-            icon: "fashion.jpg",
-        },
-        {
-            categoryName: "Food",
-            icon: "food.jpg",
-        },
-    ]
-    // console.log(category)
+const getData = async () => {
+    const res = await fetch('http://localhost:3000//api/categories', { cache: "no-store" })
+    if (!res.ok) {
+        throw new Error("Failed to fetch data")
+    }
+
+    return res.json();
+}
+
+const CategoryList = async () => {
+
+    const data = await getData();
+    // console.log(data)
     return (
         <>
             <h1 className="text-[32px] font-semibold mb-[20px]">
@@ -35,8 +20,8 @@ const CategoryList = () => {
             </h1>
             <div className="w-[100%] flex items-center justify-evenly gap-[50px] flex-wrap py-[10px]">
                 {
-                    category.map((item, index) => (
-                        <CategoryBox data={item} key={index} />
+                    data?.data.map((item, index) => (
+                        <CategoryBox data={item} key={item._id} />
                     ))
                 }
             </div>
