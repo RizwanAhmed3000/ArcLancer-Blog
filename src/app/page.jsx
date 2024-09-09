@@ -4,7 +4,10 @@ import FeaturedBlog from "@/Components/FeaturedBlog/FeaturedBlog";
 import SideMenu from "@/Components/SideMenu/SideMenu";
 import Image from "next/image";
 
-export default function Home() {
+export default function Home({ searchParams }) {
+
+  const page = parseInt(searchParams.page) || 1
+
   return (
     <main className="w-[100%]">
       <div className="my-[20px]">
@@ -15,9 +18,9 @@ export default function Home() {
       </div>
       <div className="flex gap-[50px] my-[20px] tabletRg:flex-col">
         <div className="flex-[5]">
-          <CardList />
+          <CardList page={page} />
         </div>
-        <div className="flex-[2]"> 
+        <div className="flex-[2]">
           <SideMenu />
         </div>
       </div>
