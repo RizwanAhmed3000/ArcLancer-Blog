@@ -2,8 +2,8 @@ import React from 'react'
 import BlogCard from './BlogCard/BlogCard'
 import Pagination from '../Pagination/Pagination'
 
-const getData = async (page) => {
-    const res = await fetch(`http://localhost:3000/api/posts?page=${page}`, { cache: "no-store" })
+const getData = async (page, cat) => {
+    const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`, { cache: "no-store" })
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
@@ -12,9 +12,9 @@ const getData = async (page) => {
 }
 
 
-const CardList = async ({ page }) => {
+const CardList = async ({ page, cat }) => {
     const array = [1, 2, 3, 4, 5, 6]
-    const {posts, count} = await getData(page);
+    const {posts, count} = await getData(page, cat);
     // console.log(posts)
 
     const postPerPage = 2
