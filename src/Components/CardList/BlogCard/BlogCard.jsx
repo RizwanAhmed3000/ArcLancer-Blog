@@ -12,7 +12,7 @@ const BlogCard = ({ data, key }) => {
             </div>
             <div className="text flex-[2] flex flex-col gap-[5px]">
                 <div className="details flex gap-[20px] items-center">
-                    <span className="postedAt text-theme-orange">{createdAt}</span>
+                    <span className="postedAt text-theme-orange">{createdAt.substring(0, 10)}</span>
                     <CategoryName category={categorySlug} />
                 </div>
                 <Link href={"/"}>

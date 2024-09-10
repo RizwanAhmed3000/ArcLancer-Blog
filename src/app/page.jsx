@@ -18,7 +18,7 @@ export default function Home({ searchParams }) {
       </div>
       <div className="flex gap-[50px] my-[20px] tabletRg:flex-col">
         <div className="flex-[5]">
-          <CardList page={page} />
+          <CardList page={page} cat={""}/>
         </div>
         <div className="flex-[2]">
           <SideMenu />
