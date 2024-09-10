@@ -5,13 +5,17 @@ export const GET = async (req) => {
 
     const { searchParams } = new URL(req.url)
     const page = searchParams.get("page")
-    // console.log(page)
+    const cat = searchParams.get("cat")
+    // console.log(cat)
 
     const POST_PER_PAGE = 2
 
     const query = {
         take: POST_PER_PAGE,
-        skip: POST_PER_PAGE * (page - 1)
+        skip: POST_PER_PAGE * (page - 1),
+        where: {
+            ...(cat && { categorySlug: cat })
+        }
     }
 
     try {
@@ -25,7 +29,7 @@ export const GET = async (req) => {
         const [posts, count] = await prisma.$transaction(
             [
                 prisma.post.findMany(query),
-                prisma.post.count()
+                prisma.post.count({ where: query.where })
             ]
         )
         return new NextResponse(JSON.stringify(
@@ -39,7 +43,7 @@ export const GET = async (req) => {
             }
         ))
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return new NextResponse(JSON.stringify(
             {
                 status: "Failed",
