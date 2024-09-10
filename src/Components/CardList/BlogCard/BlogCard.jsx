@@ -5,6 +5,7 @@ import Link from "next/link"
 const BlogCard = ({ data, key }) => {
     // console.log(data)
     const { title, slug, desc, categorySlug, userEmail, createdAt } = data
+    // console.log(slug)
     return (
         <div className="cardConatiner flex items-center gap-[25px] mb-[50px] tabletSm:flex-col" key={key}>
             <div className="img relative h-[200px] object-cover flex-1 tabletSm:w-[100%] tabletSm:h-[80px]">
@@ -15,11 +16,11 @@ const BlogCard = ({ data, key }) => {
                     <span className="postedAt text-theme-orange">{createdAt.substring(0, 10)}</span>
                     <CategoryName category={categorySlug} />
                 </div>
-                <Link href={"/"}>
+                <Link href={`/posts/${data?.id}`}>
                     <h1 className="text-[22px] font-semibold">{title}</h1>
                 </Link>
-                <p className="text-gray-500">{desc}</p>
-                <Link href={"/"} className="font-semibold underline-offset-4 underline hover:text-theme-orange transition duration-150  w-fit">
+                <p className="text-gray-500">{desc.substring(0, 60)}</p>
+                <Link href={`/posts/${data?.id}`} className="font-semibold underline-offset-4 underline hover:text-theme-orange transition duration-150  w-fit">
                     Read More
                 </Link>
             </div>
