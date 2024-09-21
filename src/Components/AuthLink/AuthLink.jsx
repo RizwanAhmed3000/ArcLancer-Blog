@@ -2,24 +2,33 @@
 import Link from 'next/link'
 import Button from '../OrangeButton/Button'
 import { usePathname } from "next/navigation"
-import { signOut, useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
+import Image from 'next/image'
+import Dropdown from '../Dropdown/Dropdown'
+import { useState } from 'react'
 
 const AuthLink = () => {
-    const { status } = useSession()
+    const { data, status } = useSession()
     const isLogin = status === 'unauthenticated' ? false : true
     const path = usePathname();
-    // console.log(path)
+    // console.log(data?.user)
+    const [open, setOpen] = useState(false)
     return (
         <>
             {
                 !isLogin ? (
                     <Link href={"/login"} className=''>
-                        <Button text={`login`}/>
+                        <Button text={`login`} />
                     </Link>
                 ) : (
                     <>
-                            <Link href={"/write"} className={`font-semibold hover:text-theme-black dark:hover:text-theme-white transition duration-150 ${path == "write" ? "text-theme-black dark:text-theme-white" : "text-theme-gray"}`}>Write</Link>
-                            <span className='text-theme-gray dark:hover:text-theme-white font-semibold hover:text-theme-black transition duration-150 cursor-pointer' onClick={signOut}>Logout</span>
+                        <Link href={"/write"} className={`font-semibold hover:text-theme-black dark:hover:text-theme-white transition duration-150 ${path == "write" ? "text-theme-black dark:text-theme-white" : "text-theme-gray"}`}>Write</Link>
+                        <div className='relative w-[45px] h-[45px] rounded-full object-cover cursor-pointer' onClick={() => setOpen(!open)}>
+                            <Image src={data?.user.image} fill className='rounded-full object-cover' />
+                            {
+                                open && <Dropdown />
+                            }
+                        </div>
                     </>
                 )
             }
