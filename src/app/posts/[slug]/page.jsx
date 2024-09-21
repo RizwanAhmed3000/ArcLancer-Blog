@@ -4,12 +4,11 @@ import Image from 'next/image'
 import React from 'react'
 
 const getData = async (slug) => {
-    console.log(slug)
+    // console.log(slug)
     const res = await fetch(`http://localhost:3000/api/posts/${slug}`, { cache: "no-store" })
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
-
     return res.json();
 }
 
@@ -40,7 +39,7 @@ const SingleBlogPage = async ({ params }) => {
                 <div className='flex-[5]'>
                     <div className="postTextContainer" dangerouslySetInnerHTML={{ __html: post?.desc }} />
                     <div className="commentsContainer">
-                        <Comments />
+                        <Comments postId={slug}/>
                     </div>
                 </div>
                 <div className='flex-[2]'>
