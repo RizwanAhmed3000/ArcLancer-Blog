@@ -1,4 +1,5 @@
 "use client"
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CiCirclePlus, CiImageOn, CiVideoOn } from "react-icons/ci";
@@ -16,10 +17,6 @@ const WriteBlog = () => {
 
     if (status === "loading") {
         return <div className='loading'>Loading...</div>
-    }
-
-    if (status === 'authenticated') {
-        router.push("/")
     }
 
     return (
